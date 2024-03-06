@@ -1,0 +1,39 @@
+.expense-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .expense-item h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .expense-item__description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .expense-items__category {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .expense-item div {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .expense-item div:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  
+  .expense-item div:last-child {
+    color: #888;
+  }
+  
