@@ -1,4 +1,6 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem";
+import ExpenseForm from "./components/NewExpenses/ExpenseForm";
+import NewExpense from "./components/NewExpenses/NewExpense";
 
 
 function App(){
@@ -33,7 +35,7 @@ function App(){
 
   return (
     <div>
-      <h2>Lets get started</h2>
+      <NewExpense/>
       {expense.map((expense, index) => (
         <ExpenseItem
           key={index}
@@ -46,8 +48,6 @@ function App(){
     </div>
   );
 }
-export default App;
-
-
+export default App
 
 
