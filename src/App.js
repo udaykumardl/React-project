@@ -1,10 +1,11 @@
+import { useState } from "react";
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 import ExpenseForm from "./components/NewExpenses/ExpenseForm";
 import NewExpense from "./components/NewExpenses/NewExpense";
 
 
 function App(){
-  const expense=[
+  const [expense,setExpenses]=useState([
     {
       title:'car insurance', 
       amount:200,
@@ -31,11 +32,17 @@ function App(){
     },
 
 
-  ]
+  ])
+
+
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => [...prevExpenses, expense]);
+  };
+
 
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={addExpenseHandler}/>
       {expense.map((expense, index) => (
         <ExpenseItem
           key={index}
